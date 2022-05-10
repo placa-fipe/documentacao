@@ -689,3 +689,5 @@ curl "https://api.placafipe.xyz/getdesvalorizometro" \
   "algoritmo": "phalcondesv115"
 }
 ```
+
+<img src='https://placafipe.com.br/planos.png' />
