@@ -5,8 +5,8 @@ Também suporta placas padrão Mercosul.
 
 ## [Consulta Placa](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)
 ## [Desvalorizômetro](#desvalorizometro)
-## [Valores e Planos](#valores-e-planos)
-## [Contato](#contato)
+## [Planos e Valores](#planos-e-valores-1)
+## [Contato](#contatos)
 
 ## Consultando o valor da Fipe pela Placa do veículo (getplacafipe)
 
@@ -697,6 +697,6 @@ curl "https://api.placafipe.xyz/getdesvalorizometro" \
 <img src='https://placafipe.com.br/planos.png' />
 
 
-## Contato
+## Contatos
 
 [E-mail](mailto:contato@placafipe.com.br)
