@@ -5,7 +5,9 @@ Também suporta placas padrão Mercosul.
 
 ## [Consulta Placa](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)
 ## [Desvalorizômetro](#desvalorizometro)
+## [Cotas](#consultando-a-quantidade-de-quotas-usadas-no-dia-getquotas)
 ## [Planos e Valores](#planos-e-valores-1)
+## [Códigos dos retornos](codigos.md)
 ## [Contato](#contatos)
 
 ## Consultando o valor da Fipe pela Placa do veículo (getplacafipe)
@@ -103,7 +105,7 @@ curl "https://api.placafipe.xyz/getdesvalorizometro" \
 #### Parâmetros
 
 | Nome | Tipo | Required | Descrição |
-|---|---|---|---|
+|-|-|-|-|
 | desvalorizometro | String | Required | Gerado através da consulta da [placa](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)  |
 | token | String | Required | Token gerado pelo sistema através da aquisição de um dos planos |
 
@@ -689,6 +691,36 @@ curl "https://api.placafipe.xyz/getdesvalorizometro" \
   "tempo": 12,
   "undiade_tempo": "ms",
   "algoritmo": "phalcondesv115"
+}
+```
+
+## Consultando a quantidade de quotas usadas no dia (getquotas)
+
+Retorna os dados de uso das quotas diárias pelo token.
+
+### Requisição POST https://api.placafipe.xyz/getquotas
+
+```php
+curl "https://api.placafipe.xyz/getquotas" \
+  -X POST \
+  -d "{\"token\": \"aqui_vai_o_token\"}" \
+  -H "Content-Type: application/json" 
+```
+
+#### Parâmetros
+
+| Nome | Tipo | Required | Descrição |
+|-|-|-|-|
+| token | String | Required | Token gerado pelo sistema através da aquisição de um dos planos |
+
+### Resposta
+
+```json
+{
+  "codigo": 1,
+  "msg": "Uso diário: 10 consultas",
+  "limite_diario": 185,
+  "uso_diario": "0"
 }
 ```
 
