@@ -5,7 +5,7 @@ Também suporta placas padrão Mercosul.
 
 ## [Consulta Placa](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)
 ## [Desvalorizômetro](#desvalorizometro)
-## [Cotas](#consultando-a-quantidade-de-quotas-usadas-no-dia-getquotas)
+## [Quota](#consultando-a-quantidade-de-quotas-usadas-no-dia-getquotas)
 ## [Planos e Valores](#planos-e-valores-1)
 ## [Códigos dos retornos](codigos.md)
 ## [Contato](#contatos)
