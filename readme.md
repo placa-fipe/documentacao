@@ -3,12 +3,60 @@
 API REST Full que retorna os dados e o valor da FIPE do veículo consultado pela placa ou o desvalorizômetro do veículo.
 Também suporta placas padrão Mercosul.
 
-## [Consulta Placa](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)
+## [Consulta Placa](#consultando-dados-do-veículo-pela-placa-getplaca)
+## [Consulta Placa + Fipe](#consultando-o-valor-da-fipe-pela-placa-do-veículo-getplacafipe)
 ## [Desvalorizômetro](#desvalorizometro)
 ## [Quota](#consultando-a-quantidade-de-quotas-usadas-no-dia-getquotas)
 ## [Planos e Valores](#planos-e-valores-1)
 ## [Códigos dos retornos](codigos.md)
 ## [Contato](#contatos)
+
+## Consultando dados do veículo pela placa (getplaca)
+
+Retorna os dados do veículo consultado pela placa.
+
+### Requisição POST https://api.placafipe.xyz/getplaca
+
+```php
+curl "https://api.placafipe.xyz/getplaca" \
+  -X POST \
+  -d "{\"placa\": \"ABC1234\",\"token\": \"aqui_vai_o_token\"}" \
+  -H "Content-Type: application/json" 
+```
+
+#### Parâmetros
+
+|Nome|Tipo|Required|Descrição|
+|---|---|---|---|
+|placa|String|Required|Placa do veículo a ser consultado|
+|token|String|Required|Token gerado pelo sistema através da aquisição de um dos planos|
+
+### Resposta
+
+```json
+{
+  "codigo": 1,
+  "msg": "Veículo encontrado",
+  "placa": "ABC1234",
+  "informacoes_veiculo": {
+    "marca": "FIAT",
+    "modelo": "BRAVO ESSENCE 1.8",
+    "ano": "2012",
+    "cor": "Prata",
+    "chassi": "***********",
+    "municipio": "SAO PAULO",
+    "uf": "SP",
+    "segmento": "AUTO",
+    "anoModelo": "2013",
+    "subsegmento": "AU - HATCH MEDIO",
+    "combustivel": "ALCOOL / GASOLINA",
+    "cilindradas": "1800",
+    "placa": "ABC1234"
+  },
+  "tempo": 960,
+  "unidade_tempo": "ms"
+}
+```
 
 ## Consultando o valor da Fipe pela Placa do veículo (getplacafipe)
 
@@ -731,4 +779,4 @@ curl "https://api.placafipe.xyz/getquotas" \
 
 ## Contatos
 
-[E-mail](mailto:contato@placafipe.com.br)
+[contato@placafipe.com.br](mailto:contato@placafipe.com.br)
